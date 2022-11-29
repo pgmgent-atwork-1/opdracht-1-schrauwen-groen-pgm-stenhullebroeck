@@ -14,7 +14,7 @@
       return REFERENCES.slice(0, 6)
         .map((reference) => {
           for (i = 0; i <= [5]; i++) {
-            return `<div class="reference">
+            return `<div class="reference" id="${reference.id}">
           <img src="${reference.image}" alt="reference" />
           <p>${reference.description}</p>
           </div>`;
