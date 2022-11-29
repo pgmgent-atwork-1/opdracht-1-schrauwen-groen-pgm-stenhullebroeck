@@ -1,28 +1,21 @@
 (() => {
-  const aanleg = services.filter((i) => {
-    return i.type === "aanleg";
-  });
-  const onderhoud = services.filter((i) => {
-    return i.type === "onderhoud";
-  });
-
   const app = {
     initialize() {
       this.cacheElements();
       this.buildUI();
     },
     cacheElements() {
-      this.$services_aanleg = document.querySelector("#services--aanleg");
-      this.$services_onderhoud = document.querySelector("#services--onderhoud");
+      this.$services = document.getElementById("services");
     },
     buildUI() {
-      if (this.$services_aanleg != null) {
-        this.$services_aanleg.innerHTML = this.generateHTMLForServices(aanleg);
-      }
-      if (this.$services_onderhoud != null) {
-        this.$services_onderhoud.innerHTML =
-          this.generateHTMLForServices(onderhoud);
-      }
+      this.$services.innerHTML = this.generateHTMLForServices(
+        this.getFilteredServices(this.$services.dataset.type)
+      );
+    },
+    getFilteredServices(serv) {
+      return services.filter((i) => {
+        return i.type === serv;
+      });
     },
     generateHTMLForServices(element) {
       return element

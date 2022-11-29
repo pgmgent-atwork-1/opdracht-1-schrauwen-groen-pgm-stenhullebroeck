@@ -15,32 +15,50 @@
       this.buildUI();
     },
     cacheElements() {
-      this.$private = document.getElementById("private");
-      this.$b2b = document.getElementById("b2b");
-      this.$public = document.getElementById("public");
+      this.$references = document.getElementById("references");
+      //   this.$private = document.getElementById("private");
+      //   this.$b2b = document.getElementById("b2b");
+      //   this.$public = document.getElementById("public");
     },
     buildUI() {
-      if (this.$private != null) {
-        this.$private.innerHTML +=
-          this.generateHTMLForFilteredReferences(private);
-      }
-      if (this.$b2b != null) {
-        this.$b2b.innerHTML += this.generateHTMLForFilteredReferences(b2b);
-      }
-      if (this.$public != null) {
-        this.$public.innerHTML +=
-          this.generateHTMLForFilteredReferences(public);
-      }
+      this.$references.innerHTML += this.generateHTMLForFilteredReferences(
+        this.getFilteredReferences("private")
+      );
+      this.$references.innerHTML += this.generateHTMLForFilteredReferences(
+        this.getFilteredReferences("b2b")
+      );
+      this.$references.innerHTML += this.generateHTMLForFilteredReferences(
+        this.getFilteredReferences("public")
+      );
+    },
+    getFilteredReferences(ref) {
+      return REFERENCES.filter((i) => {
+        return i.type === ref;
+      });
     },
     generateHTMLForFilteredReferences(element) {
-      return element
-        .map((reference) => {
-          return `<div class="reference-filtered" id="${reference.id}">
+      return (
+        ` <div data-type="${element}"><h2 id="private">${this.getReferenceTitle(
+          element
+        )}</h2>` +
+        element
+          .map((reference) => {
+            return `<div class="reference-filtered" id="${reference.id}">
         <img src="${reference.image}" alt="reference" />
         <p>${reference.description}</p>
-        </div>`;
-        })
-        .join("");
+        </div></div>`;
+          })
+          .join("")
+      );
+    },
+    getReferenceTitle(i) {
+      if (i === "private") {
+        return "Privé-omgeving";
+      } else if (i === "b2b") {
+        return "Zakelijke omgeving";
+      } else if (i === "public") {
+        return "Openbare omgeving";
+      }
     },
   };
   app.initialize();
