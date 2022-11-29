@@ -16,9 +16,6 @@
     },
     cacheElements() {
       this.$references = document.getElementById("references");
-      //   this.$private = document.getElementById("private");
-      //   this.$b2b = document.getElementById("b2b");
-      //   this.$public = document.getElementById("public");
     },
     buildUI() {
       this.$references.innerHTML += this.generateHTMLForFilteredReferences(
@@ -38,27 +35,31 @@
     },
     generateHTMLForFilteredReferences(element) {
       return (
-        ` <div data-type="${element}"><h2 id="private">${this.getReferenceTitle(
-          element
-        )}</h2>` +
+        `${this.getReferenceTitle(this.findType(element))}` +
         element
           .map((reference) => {
             return `<div class="reference-filtered" id="${reference.id}">
         <img src="${reference.image}" alt="reference" />
         <p>${reference.description}</p>
-        </div></div>`;
+        </div>`;
           })
           .join("")
       );
     },
     getReferenceTitle(i) {
       if (i === "private") {
-        return "Privé-omgeving";
+        return `<h2 id="${i}">Privé-omgeving</h2>`;
       } else if (i === "b2b") {
-        return "Zakelijke omgeving";
-      } else if (i === "public") {
-        return "Openbare omgeving";
+        return `<h2 id="${i}">Zakelijke omgeving</h2>`;
+      } else {
+        return `<h2 id="${i}">Openbare omgeving</h2>`;
       }
+    },
+    findType(f) {
+      const temp = f.find((r) => {
+        return r.type;
+      });
+      return temp.type;
     },
   };
   app.initialize();
