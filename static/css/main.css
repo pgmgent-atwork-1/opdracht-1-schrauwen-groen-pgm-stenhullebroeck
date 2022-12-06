@@ -1,7 +1,7 @@
 @font-face {
-  font-family: "Addelle Sans Bold";
-  src: url("../fonts/Addelle\ Sans\ \ Bold.woff2") format("woff2"),
-    url("../fonts/Addelle\ Sans\ \ Bold.woff") format("woff");
+  font-family: 'Addelle Sans';
+  src: url('../fonts/Addelle\ Sans\ \ Bold.woff2') format('woff2'),
+    url('../fonts/Addelle\ Sans\ \ Bold.woff') format('woff');
   font-weight: 700;
   font-style: normal;
   font-stretch: normal;
@@ -9,9 +9,9 @@
 }
 
 @font-face {
-  font-family: "Addelle Sans Regular";
-  src: url("../fonts/Addelle\ Sans\ .woff2") format("woff2"),
-    url("../fonts/Addelle\ Sans\ .woff") format("woff");
+  font-family: 'Addelle Sans';
+  src: url('../fonts/Addelle\ Sans\ .woff2') format('woff2'),
+    url('../fonts/Addelle\ Sans\ .woff') format('woff');
   font-weight: 400;
   font-style: normal;
   font-stretch: normal;
@@ -19,9 +19,9 @@
 }
 
 @font-face {
-  font-family: "Space Grotesk Light";
-  src: url("../fonts/Space\ Grotesk\ Light.woff2") format("woff2"),
-    url("../fonts/Space\ Grotesk\ Light.woff") format("woff");
+  font-family: 'Space Grotesk';
+  src: url('../fonts/Space\ Grotesk\ Light.woff2') format('woff2'),
+    url('../fonts/Space\ Grotesk\ Light.woff') format('woff');
   font-weight: 300;
   font-style: normal;
   font-stretch: normal;
@@ -29,9 +29,9 @@
 }
 
 @font-face {
-  font-family: "Space Grotesk Medium";
-  src: url("../fonts/Space\ Grotesk\ Medium.woff2") format("woff2"),
-    url("../fonts/Space\ Grotesk\ Medium.woff") format("woff");
+  font-family: 'Space Grotesk';
+  src: url('../fonts/Space\ Grotesk\ Medium.woff2') format('woff2'),
+    url('../fonts/Space\ Grotesk\ Medium.woff') format('woff');
   font-weight: 500;
   font-style: normal;
   font-stretch: normal;
@@ -48,7 +48,7 @@
 /* universal */
 
 body {
-  font-family: "Adelle Sans Regular", sans-serif;
+  font-family: 'Adelle Sans', sans-serif;
   font-weight: 300;
   color: var(--text);
 }
@@ -67,6 +67,13 @@ a {
   background-color: hsl(156, 36%, 89%);
 }
 
+.section--light-green h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 500;
+  font-size: 2rem;
+  color: var(--green-800);
+}
+
 .section--dark-green {
   background-color: var(--green-800);
 }
@@ -77,35 +84,43 @@ a {
 
 .section--dark-green h2 {
   color: white;
-  font-family: "Space Grotesk Light", sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 300;
 }
 
 .section--dark-green h3 {
-  font-family: "Space Grotesk Light", sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   color: var(--green-300);
+  font-weight: 300;
 }
 
 .section--dark-green h4 {
   color: hsl(156, 36%, 89%);
-  font-family: "Space Grotesk Light", sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 300;
 }
 
 .section--dark-green h5 {
   color: var(--orange-500);
-  font-family: "Space Grotesk Medium", sans-serif "Space Grotesk Medium",
-    sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 500;
 }
 
 .section--dark-green p {
   color: white;
 }
 
-button {
+.button {
   padding: 0.9rem 1.5rem;
-  font-family: "Addelle Sans Bold", sans-serif;
+  font-family: 'Addelle Sans', sans-serif;
+  font-weight: 700;
   border: none;
   background-color: var(--orange-500);
   color: white;
+}
+
+.button:hover {
+  filter: brightness(1.1);
 }
 
 header {
@@ -172,7 +187,8 @@ header {
 }
 
 nav {
-  font-family: "Space Grotesk Medium", sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 400;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -235,7 +251,8 @@ nav ul li:hover {
 }
 
 .contact--orange {
-  font-family: "Adelle Sans Bold", sans-serif;
+  font-family: 'Adelle Sans', sans-serif;
+  font-weight: 700;
   background-color: var(--orange-500);
 
   padding: 0.7rem 1.3rem;
@@ -254,7 +271,8 @@ nav ul li:hover {
   nav ul li,
   .contact--orange {
     text-align: center;
-    font-family: "Adelle Sans Regular", sans-serif;
+    font-family: 'Adelle Sans', sans-serif;
+    font-weight: 400;
     color: var(--green-500);
     font-size: 1.1rem;
     background-color: white;
@@ -315,7 +333,8 @@ nav ul li:hover {
 }
 
 .footer__banner h2 {
-  font-size: 1.7rem;
+  font-weight: 500;
+  font-size: 1.2rem;
 }
 
 @media (max-width: 69.375rem) {
@@ -490,7 +509,8 @@ footer {
 }
 
 .hero h1 {
-  font-family: "Space Grotesk Light", sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 300;
   font-size: 2.5rem;
   padding: 1rem 0rem 0rem 1rem;
 }
@@ -596,7 +616,8 @@ footer {
 
 .hero__contact h2 {
   font-size: 1.2rem;
-  font-family: "Space Grotesk Light", sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 300;
 }
 
 @media (min-width: 61.9375rem) {
@@ -812,7 +833,72 @@ footer {
   }
 }
 
+.section__footer-top {
+  /* display: flex; */
+  padding-bottom: 17rem;
+}
+
+.onze-werkwijze h3 {
+  padding-bottom: 1rem;
+}
+
+.onze-werkwijze {
+  padding-top: 3.5rem;
+  padding-left: 1.5rem;
+  margin-bottom: 7rem;
+}
+
+.onze-werkwijze p {
+  font-size: 0.9375rem;
+  padding-bottom: 2.5rem;
+  margin-right: 1.5rem;
+  line-height: 1.5625rem;
+}
+
+.daarom-schrauwen {
+  padding-left: 1.5rem;
+}
+
+.daarom-schrauwen ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 2.1875rem;
+}
+
+.daarom-schrauwen li {
+  display: flex;
+  padding-bottom: 1.125rem;
+  border-bottom: 1px solid var(--orange-500);
+  margin-bottom: 1.125rem;
+}
+
+.daarom-schrauwen li:last-of-type {
+  border-bottom: none;
+}
+
+.daarom-schrauwen img {
+  width: 1.25rem;
+  aspect-ratio: 1 / 1;
+  margin-right: 1rem;
+}
+
 /* first page */
+
+.schrauwen-in-view {
+  display: flex;
+  overflow-x: scroll;
+}
+
+.schrauwen-in-view article {
+  min-width: 14.2422rem;
+  padding: 0rem 1.5625rem;
+}
+
+.schrauwen-in-view img {
+  min-width: 14.2422rem;
+  object-fit: cover;
+  aspect-ratio: 2 / 3;
+}
 
 /* references */
 

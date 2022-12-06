@@ -1,31 +1,21 @@
 (() => {
-  const private = REFERENCES.filter((i) => {
-    return i.type === "private";
-  });
-  const b2b = REFERENCES.filter((i) => {
-    return i.type === "b2b";
-  });
-  const public = REFERENCES.filter((i) => {
-    return i.type === "public";
-  });
-
   const app = {
     initialize() {
       this.cacheElements();
       this.buildUI();
     },
     cacheElements() {
-      this.$references = document.getElementById("references");
+      this.$references = document.getElementById('references');
     },
     buildUI() {
       this.$references.innerHTML += this.generateHTMLForFilteredReferences(
-        this.getFilteredReferences("private")
+        this.getFilteredReferences('private')
       );
       this.$references.innerHTML += this.generateHTMLForFilteredReferences(
-        this.getFilteredReferences("b2b")
+        this.getFilteredReferences('b2b')
       );
       this.$references.innerHTML += this.generateHTMLForFilteredReferences(
-        this.getFilteredReferences("public")
+        this.getFilteredReferences('public')
       );
     },
     getFilteredReferences(ref) {
@@ -43,16 +33,17 @@
         <p>${reference.description}</p>
         </div>`;
           })
-          .join("")
+          .join('')
       );
     },
     getReferenceTitle(i) {
-      if (i === "private") {
-        return `<h2 id="${i}">Privé-omgeving</h2>`;
-      } else if (i === "b2b") {
-        return `<h2 id="${i}">Zakelijke omgeving</h2>`;
-      } else {
-        return `<h2 id="${i}">Openbare omgeving</h2>`;
+      switch (i) {
+        case 'private':
+          return `<h2 id="${i}">Privé-omgeving</h2>`;
+        case 'b2b':
+          return `<h2 id="${i}">Zakelijke omgeving</h2>`;
+        case 'public':
+          return `<h2 id="${i}">Openbare omgeving</h2>`;
       }
     },
     findType(f) {
