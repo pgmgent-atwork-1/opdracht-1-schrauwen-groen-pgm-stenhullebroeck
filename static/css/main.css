@@ -693,6 +693,7 @@ footer {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    align-items: center;
   }
 }
 
@@ -1049,7 +1050,7 @@ footer {
   max-width: 28.125rem;
   width: 100%;
   object-fit: cover;
-  margin-bottom: 2.1875rem;
+  transition: all 0.5s ease;
 }
 
 @media (min-width: 30rem) {
@@ -1079,6 +1080,45 @@ footer {
     max-width: 30.9375rem;
     aspect-ratio: 1 / 1;
   }
+}
+
+.service div {
+  height: 12.5rem;
+  overflow: hidden;
+  margin-bottom: 2.1875rem;
+}
+
+@media (min-width: 30rem) {
+  .service div {
+    height: 15.625rem;
+  }
+}
+
+@media (min-width: 47.9375rem) {
+  .service div {
+    height: 18.75rem;
+    max-width: 23.65rem;
+  }
+}
+
+@media (min-width: 61.9375rem) {
+  .service div {
+    height: 28.125rem;
+    max-width: 28.125rem;
+    aspect-ratio: 1 / 1;
+  }
+}
+
+@media (min-width: 61.9375rem) {
+  .service div {
+    max-height: 30.9375rem;
+    max-width: 30.9375rem;
+    aspect-ratio: 1 / 1;
+  }
+}
+
+.service img:hover {
+  transform: scale(1.05);
 }
 
 .service h2 {

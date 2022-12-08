@@ -22,7 +22,9 @@
         .map((service) => {
           return `
           <div class="service" id="${service.id}">
+          <div>
         <img src="${service.image}" alt="service picture" />
+        </div>
         <h2>${service.title}</h2>
         <p>${service.description}</p>
         <a href="#" class="button">Meer informatie</a>
