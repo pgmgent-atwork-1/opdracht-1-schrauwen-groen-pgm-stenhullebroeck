@@ -5,7 +5,7 @@
       this.buildUI();
     },
     cacheElements() {
-      this.$services = document.getElementById("services");
+      this.$services = document.getElementById('services');
     },
     buildUI() {
       this.$services.innerHTML = this.generateHTMLForServices(
@@ -20,13 +20,16 @@
     generateHTMLForServices(element) {
       return element
         .map((service) => {
-          return `<div class="service" id="${service.id}">
+          return `
+          <div class="service" id="${service.id}">
         <img src="${service.image}" alt="service picture" />
         <h2>${service.title}</h2>
         <p>${service.description}</p>
-        </div>`;
+        <a href="#" class="button">Meer informatie</a>
+        </div>
+        `;
         })
-        .join("");
+        .join('');
     },
   };
   app.initialize();

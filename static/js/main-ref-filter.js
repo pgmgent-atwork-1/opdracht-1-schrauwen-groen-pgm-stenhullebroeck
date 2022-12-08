@@ -8,14 +8,17 @@
       this.$references = document.getElementById('references');
     },
     buildUI() {
+      // this.$references.innerHTML += this.generateHTMLForFilteredReferences(
+      //   this.getFilteredReferences('private')
+      // );
+      // this.$references.innerHTML += this.generateHTMLForFilteredReferences(
+      //   this.getFilteredReferences('b2b')
+      // );
+      // this.$references.innerHTML += this.generateHTMLForFilteredReferences(
+      //   this.getFilteredReferences('public')
+      // );
       this.$references.innerHTML += this.generateHTMLForFilteredReferences(
-        this.getFilteredReferences('private')
-      );
-      this.$references.innerHTML += this.generateHTMLForFilteredReferences(
-        this.getFilteredReferences('b2b')
-      );
-      this.$references.innerHTML += this.generateHTMLForFilteredReferences(
-        this.getFilteredReferences('public')
+        this.getFilteredReferences(REFERENCES)
       );
     },
     getFilteredReferences(ref) {
@@ -24,26 +27,41 @@
       });
     },
     generateHTMLForFilteredReferences(element) {
-      return (
-        `${this.getReferenceTitle(this.findType(element))}` +
-        element
-          .map((reference) => {
-            return `<div class="reference-filtered" id="${reference.id}">
-        <img src="${reference.image}" alt="reference" />
-        <p>${reference.description}</p>
-        </div>`;
-          })
-          .join('')
-      );
+      const types = [...new Set(REFERENCES.map((r) => r.type))];
+      return types
+        .map((type) => {
+          console.log(type);
+          return `
+          <div class="cards-${type} reference-cards">
+          <div class="centre">
+          <h2 id=${type}>${this.getReferenceTitle(type)}</h2>
+          
+          <div class="cards">
+            ${this.getFilteredReferences(type)
+              .map((reference) => {
+                return `<div class="card" id="${reference.id}">
+            <img src="${reference.image}" alt="reference" />
+            <p>${reference.description}</p>
+            </div>
+            `;
+              })
+              .join('')}
+          </div>
+          </div>
+          </div>`;
+        })
+        .join('');
     },
     getReferenceTitle(i) {
       switch (i) {
         case 'private':
-          return `<h2 id="${i}">Privé-omgeving</h2>`;
+          return 'Privé-omgeving';
         case 'b2b':
-          return `<h2 id="${i}">Zakelijke omgeving</h2>`;
+          return 'Zakelijke omgeving';
         case 'public':
-          return `<h2 id="${i}">Openbare omgeving</h2>`;
+          return 'Openbare omgeving';
+        default:
+          return '';
       }
     },
     findType(f) {
