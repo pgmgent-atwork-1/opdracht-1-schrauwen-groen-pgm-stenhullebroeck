@@ -1577,20 +1577,78 @@ footer {
   }
 }
 
+.schrauwen-in-view-box {
+  padding: 3.125rem 0rem;
+  margin: 0rem 1.5rem;
+}
+
+.schrauwen-in-view-box h3 {
+  font-size: 2rem;
+  line-height: 2rem;
+  font-weight: 500;
+}
+
+@media (min-width: 47.9375rem) {
+  .schrauwen-in-view-box h3 {
+    font-size: 2.3rem;
+    line-height: 2.3rem;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+  }
+}
+
+@media (min-width: 61.9375rem) {
+  .schrauwen-in-view-box h3 {
+    font-size: 2.82rem;
+    line-height: 2.82rem;
+    padding-top: 2.5rem;
+    padding-bottom: 1.5rem;
+  }
+}
+
 .schrauwen-in-view {
   display: flex;
   overflow-x: scroll;
+  list-style-type: none;
+  padding-left: 0;
 }
 
 .schrauwen-in-view li {
-  min-width: 14.2422rem;
-  padding: 0rem 1.5625rem;
+  min-width: 95%;
+  margin: 1.5rem 1.5rem 1.875rem 0rem;
+  padding: 0rem 1.5625rem 0rem 0rem;
+}
+
+@media (min-width: 47.9375rem) {
+  .schrauwen-in-view li {
+    min-width: 45%;
+  }
+}
+
+@media (min-width: 61.9375rem) {
+  .schrauwen-in-view li {
+    min-width: 25.5%;
+  }
 }
 
 .schrauwen-in-view img {
   /* min-width: 14.2422rem; */
   object-fit: cover;
-  aspect-ratio: 2 / 3;
+  aspect-ratio: 3 / 4;
+  margin-bottom: 1.875rem;
+}
+
+@media (min-width: 47.9375rem) {
+  .schrauwen-in-view img {
+    aspect-ratio: 2 / 3;
+  }
+}
+
+.schrauwen-in-view p {
+  font-size: 0.82rem;
+  line-height: 0.984rem;
+  padding: 0.9375rem 0rem;
+  border-bottom: 1px solid var(--green-300);
 }
 
 /* services */
