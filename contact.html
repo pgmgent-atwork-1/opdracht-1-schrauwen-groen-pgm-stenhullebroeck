@@ -79,6 +79,147 @@
           </div>
         </div>
       </section>
+      <section class="section--light-green">
+        <form class="centre contact-form">
+          <h2>Stuur ons een bericht</h2>
+          <p>
+            Vul onderstaand formulier in om ons een bericht te sturen. We
+            contacteren je zo snel als mogelijk meer informatie voor een gesprek
+            of afspraak.
+          </p>
+          <div class="contact-form__inputs">
+            <div class="inquery-type input">
+              <legend aria-required="true">
+                Ik zoek informatie als <span class="required">*</span>
+              </legend>
+              <div>
+                <input
+                  type="radio"
+                  name=""
+                  id="particulier"
+                  required="required"
+                />
+                <label class="radio" for="particulier">Particulier</label>
+              </div>
+              <div>
+                <input type="radio" name="" id="b2b" required="required" />
+                <label class="radio" for="b2b">Bedrijf/instelling</label>
+              </div>
+              <div>
+                <input type="radio" name="" id="public" required="required" />
+                <label class="radio" for="public">Openbaar bestuur</label>
+              </div>
+            </div>
+            <div class="business-name input">
+              <label for="business">Bedrijfsnaam/organisatie</label>
+              <input
+                type="text"
+                maxlength="256"
+                name="business-name"
+                id="business"
+                placeholder="Uw bedrijf/organisatie"
+              />
+            </div>
+            <div class="province input">
+              <label for="province"
+                >Provincie <span class="required">*</span></label
+              >
+              <div>
+                <select name="province" id="province" required="required">
+                  <option value="west-vlaanderen">West-Vlaanderen</option>
+                  <option value="oost-vlaanderen">Oost-Vlaanderen</option>
+                  <option value="antwerpen">Antwerpen</option>
+                  <option value="henegouwen">Henegouwen</option>
+                  <option value="vlaams-brabant">Vlaams-Brabant</option>
+                  <option value="namen">Namen</option>
+                  <option value="luik">Luik</option>
+                  <option value="luxemburg">Luxemburg</option>
+                  <option value="limburg">Limburg</option>
+                  <option value="waals-brabant">Waals-Brabant</option>
+                </select>
+              </div>
+            </div>
+            <div class="last-name input">
+              <label for="last-name"
+                >Familienaam <span class="required">*</span></label
+              >
+              <input
+                type="text"
+                maxlength="256"
+                name="last-name"
+                id="last-name"
+                placeholder="Uw familienaam"
+                required="required"
+              />
+            </div>
+            <div class="first-name input">
+              <label for="first-name"
+                >Voornaam <span class="required">*</span></label
+              >
+              <input
+                type="text"
+                maxlength="256"
+                name="first-name"
+                id="first-name"
+                placeholder="Uw voornaam"
+                required="required"
+              />
+            </div>
+            <div class="telephone input">
+              <label for="telephone"
+                >Telefoonnummer <span class="required">*</span></label
+              >
+              <input
+                type="tel"
+                maxlength="256"
+                name="telephone"
+                id="telephone"
+                placeholder="Uw telefoonnummer"
+                required="required"
+              />
+            </div>
+            <div class="email input">
+              <label for="email"
+                >E-mailadres <span class="required">*</span></label
+              >
+              <input
+                type="email"
+                maxlength="256"
+                name="email"
+                id="email"
+                placeholder="Uw e-mailadres"
+                required="required"
+              />
+            </div>
+            <div class="message input">
+              <label for="message"
+                >Uw bericht <span class="required">*</span></label
+              >
+              <textarea
+                maxlength="5000"
+                name="message"
+                id="message"
+                cols="30"
+                rows="4"
+                placeholder="Uw bericht"
+                required="required"
+              ></textarea>
+            </div>
+            <div class="privacy">
+              <input
+                type="checkbox"
+                name="privacy"
+                id="privacy"
+                required="required"
+              />
+              <label for="privacy"
+                >Ik ga akkoord met het <a href="#">Privacybeleid</a></label
+              >
+            </div>
+          </div>
+          <input type="submit" class="button" />
+        </form>
+      </section>
     </main>
     <footer class="section--dark-green">
       <div class="centre">

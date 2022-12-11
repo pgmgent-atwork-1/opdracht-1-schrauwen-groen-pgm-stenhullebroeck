@@ -1,4 +1,17 @@
 @font-face {
+  font-family: 'Adelle Sans CYR Eb';
+  src: url('AdelleSansCYREb.eot');
+  src: url('AdelleSansCYREb.eot?#iefix') format('embedded-opentype'),
+    url('AdelleSansCYREb.woff2') format('woff2'),
+    url('AdelleSansCYREb.woff') format('woff'),
+    url('AdelleSansCYREb.svg#AdelleSansCYREb') format('svg');
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-2074;
+}
+
+@font-face {
   font-family: 'Addelle Sans';
   src: url('../fonts/Addelle\ Sans\ \ Bold.woff2') format('woff2'),
     url('../fonts/Addelle\ Sans\ \ Bold.woff') format('woff');
@@ -33,6 +46,19 @@
   src: url('../fonts/Space\ Grotesk\ Medium.woff2') format('woff2'),
     url('../fonts/Space\ Grotesk\ Medium.woff') format('woff');
   font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-2044;
+}
+
+@font-face {
+  font-family: 'Space Grotesk SemiBold';
+  src: url('Space Grotesk SemiBold.eot');
+  src: url('Space Grotesk SemiBold.eot?#iefix') format('embedded-opentype'),
+    url('Space Grotesk SemiBold.woff2') format('woff2'),
+    url('Space Grotesk SemiBold.woff') format('woff'),
+    url('Space Grotesk SemiBold.svg#Space Grotesk SemiBold') format('svg');
+  font-weight: 600;
   font-style: normal;
   font-stretch: normal;
   unicode-range: U+0020-2044;
@@ -103,7 +129,7 @@ h6 {
 .section--dark-green h2 {
   color: white;
   font-family: 'Space Grotesk', sans-serif;
-  font-weight: 300;
+  font-weight: 500;
 }
 
 .section--dark-green h3 {
@@ -372,6 +398,12 @@ header {
 @media (max-width: 32.1875rem) {
   .footer__banner h2 {
     font-size: 1rem;
+  }
+}
+@media (min-width: 991px) {
+  .footer__banner h2 {
+    font-size: 1.82rem;
+    line-height: 2.1871rem;
   }
 }
 
@@ -993,7 +1025,7 @@ footer {
   /* color: var(--green-800); */
   font-size: 2.4rem;
   line-height: 2.4rem;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 @media (min-width: 30rem) {
@@ -2095,4 +2127,191 @@ footer {
   .card p {
     margin-bottom: 3rem;
   }
+}
+
+/* contact page */
+
+.contact-form {
+  padding: 4rem 1.5rem 16rem 1.5rem;
+  color: var(--green-800);
+}
+
+@media (min-width: 30rem) {
+  .contact-form {
+    padding: 4rem 3.125rem 16rem 3.125rem;
+  }
+}
+
+@media (min-width: 47.9375rem) {
+  .contact-form {
+    padding: 4rem 4.6875rem 16rem 4.6875rem;
+  }
+}
+
+@media (min-width: 61.9375rem) {
+  .contact-form {
+    padding: 4rem 1.5625rem 16rem 1.5625rem;
+  }
+}
+
+@media (min-width: 90rem) {
+  .contact-form {
+    padding: 4rem 20.625rem 16rem 20.625rem;
+  }
+}
+
+.required {
+  color: var(--orange-500);
+}
+
+.contact-form h2 {
+  font-size: 2rem;
+  line-height: 2rem;
+  font-weight: 500;
+}
+
+@media (min-width: 47.9375rem) {
+  .contact-form h2 {
+    font-size: 2.3rem;
+    line-height: 2.3rem;
+  }
+}
+
+@media (min-width: 61.9375rem) {
+  .contact-form h2 {
+    font-size: 2.82rem;
+    line-height: 2.82rem;
+  }
+}
+
+.contact-form p {
+  font-size: 0.9375rem;
+  line-height: 1.5625rem;
+  margin: 1.5625rem 0rem;
+}
+
+@media (min-width: 47.9375rem) {
+  .contact-form p {
+    font-size: 1rem;
+    line-height: 1.75rem;
+    width: 28.125rem;
+    margin: 1.5625rem 0rem;
+  }
+}
+
+@media (min-width: 61.9375rem) {
+  .contact-form p {
+    font-size: 1.0625rem;
+    line-height: 1.8125rem;
+  }
+}
+
+@media (min-width: 90rem) {
+  .contact-form p {
+    margin: 3.4375rem 0rem;
+    width: 34.375rem;
+  }
+}
+
+@media (min-width: 61.9375rem) {
+  .contact-form__inputs {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5625rem;
+  font-size: 1rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 500;
+  color: var(--green-800);
+  width: 100%;
+}
+
+@media (min-width: 61.9375rem) {
+  .input {
+    /* flex-direction: row; */
+    width: 50%;
+    padding-right: 2.8125rem;
+  }
+  .input:nth-child(3),
+  .input:nth-child(8) {
+    width: 100%;
+  }
+}
+
+@media (min-width: 47.9375rem) {
+  label {
+    font-size: 1.17rem;
+    line-height: 1.75rem;
+  }
+  legend {
+    font-size: 1.17rem;
+    line-height: 1.75rem;
+  }
+}
+
+.radio {
+  font-size: 0.9rem;
+  font-weight: 300;
+  padding-left: 1.375rem;
+}
+
+@media (min-width: 47.9375rem) {
+  .radio {
+    font-size: 1rem;
+  }
+}
+
+.privacy {
+  flex-direction: row;
+  margin: auto;
+  align-items: center;
+  font-family: 'Adelle Sans', sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.5625rem;
+  font-weight: 400;
+  margin: 2.8125rem 0rem;
+}
+
+.privacy label {
+  padding-left: 1.25rem;
+}
+
+@media (min-width: 767px) {
+  .privacy label {
+    font-size: 1rem;
+  }
+}
+
+.privacy a {
+  font-weight: 700;
+  color: var(--green-800);
+  border-bottom: 2px solid var(--orange-500);
+}
+
+.privacy a:hover {
+  border: none;
+}
+
+input,
+textarea {
+  padding: 0.5rem 0.75rem 0.9375rem 0rem;
+  margin-top: 0.625rem;
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid var(--green-800);
+  font-family: 'Adelle Sans', sans-serif;
+  font-size: 0.9375rem;
+  /* font color and weight not switching, don't know why */
+  color: hsl(0, 1%, 63%);
+  font-weight: 500;
+}
+
+input:focus {
+  outline: none;
+  border-bottom: 1px solid hsl(202, 100%, 50%);
 }
